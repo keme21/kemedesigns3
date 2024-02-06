@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keme Rex</title>
+    <style>
+        
+        body, h1, ul, li, a {
+    
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+        /* Responsive navigation styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding-top: 20px;
+    }
+    .content img {
+            width: 100% !important;
+            
+        }
+.carousel {
+  display: none !important;
+}
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px 5%;
+    background-color: white; /* Light gray background */
+
+}
+
+header h1 {
+    color: black; /* Sample color for the title */
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+nav ul li {
+    padding-left: 20px;
+}
+
+nav ul li a {
+    color: grey; /* Default link color */
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: grey; /* Sample hover and active link color */
+}
+.oval { 
+    text-align: right;
+    margin-right: 4.5%;
+    }
+.oval-button {
+    background-color: #C51A4A; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 20px; /* Top/bottom padding and left/right padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px; /* This creates the oval shape */
+    
+    cursor: pointer;
+}
+
+.oval-button:hover {
+    background-color: grey; /* Darker shade of green */
+}
+        .content {
+            text-align: center;
+            padding: 50px;  
+        }
+        .content ul {
+     /* Removes the default list styling */
+    padding: 0;
+    margin: 0 auto; /* Centers the list */
+    text-align: left; /* Aligns the text to the left */
+    max-width: 600px; /* Adjust this value as needed to fit the content */
+}
+
+.content li {
+    line-height: 3.0rem; /* Adjust line height for better readability */
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+       
+        .content h1 {
+            margin-bottom: 30px;
+        color: #C51A4A;
+        }
+        .content h2 { text-align: center;
+        
+        }
+        .content img {
+            width: 80%;
+            height: auto;
+        }
+        .next {
+    text-align: center; /* Centers the text and image */
+    margin: 20px 0; /* Adds space above and below the image and text */
+}
+
+.next img {
+    width: 100%; /* Adjust the width as necessary, or set to auto */
+    height: auto; /* Keeps the aspect ratio of the image */
+    max-width: 600px; /* Limits the size of the image */
+    margin: 0 auto; /* Centers the image */
+}
+
+.next li {line-height: 3.0rem; /* Adjust line height for better readability */
+    margin-bottom: 10px; /* Adds space between list items */}
+   
+.next ul {
+    padding: 0;
+    margin: 0 auto; /* Centers the list */
+    text-align: left; /* Aligns the text to the left */
+    max-width: 600px; /* Adjust this value as needed to fit the content */ /* Adds space between the image and the text */
+}
+.free {margin-top: 30px; 
+
+
+}
+.free h2 {
+    text-align: center;
+    
+}
+.free p { text-align: center;
+color:#C51A4A}       
+.carousel {
+        width: 60%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20%;
+    }
+    .carousel-images {
+        display: flex;
+        width: 40%;
+        transition: transform 0.5s ease;
+    }
+    .carousel-images img {
+        max-width: 100%;
+        display: block;
+    }
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .prev-button {
+        left: 10px;
+    }
+    .next-button {
+        right: 10px;
+    }
+
+    /* Add additional styling as needed */
+       
+    .hamburger {
+    display: none;
+    cursor: pointer;
+    color: grey; /* Adjust based on your header color */
+    font-size: 2rem;
+    user-select: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 20px;
+}
+
+nav ul li a {
+    color: grey; /* Default link color */
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: grey; /* Sample hover and active link color */
+}
+
+@media (max-width: 768px) {
+    h2{
+        font-size: 1.5rem !important;
+    }
+   
+    .hamburger {
+        display: block;
+       
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: left; 
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0; /* Adjust based on your design */
+    }
+.next li{
+
+    margin: 10% !important;
+}
+    /* Additional responsive styling */
+    header {
+        flex-direction: column;
+    }
+
+} 
+.footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        clear: both;
+   background-color: grey;
+    color: white;
+    }     
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Keme Rex</h1>
+       
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+<nav>
+    <ul id="nav-menu">
+        <li><a href="portfolio.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/keme-rex-19929a179/">Connect</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+    </header>
+    <div class="oval">
+    <p><a href="your-link.html" class="oval-button">Watch Me</a></p>
+   </div>  
+    <main class="content">
+        <h1>Python in Real world</h1>
+        
+        <!-- Placeholder for the image, since no image is actually provided -->
+        <img src="ras1.png" alt="Project Image">
+        <h2>Project at a Glance</h2>
+        <ul>
+            <li>Innovative Security Solution: Utilizes a pressure mat as a trigger for home security alerts.</li>
+            <li>Real-Time Email Alerts: Sends immediate email notifications when the pressure mat is activated (Stepped on)</li>
+            <li>DIY and Cost-Effective: Built using a Raspberry Pi, Python code and a standard pressure mat, offering a budget-friendly security solution</li>
+            <li>Easy Integration: Seamlessly integrates into existing home network</li>
+            <li>Continuous Monitoring: ideal for continuous monitoring using the infinite python while loop</li>
+            <li>Versatile Application: Suitable for various settings, including homes, offices, or garages</li>
+            <li>Enhanced Safety: Provides an additional layer of security for peace of mind</li>
+            <!-- more list items -->
+        
+        
+        </ul>
+        
+        <!-- Your text goes here -->
+    </main>
+    
+    <div class="next">
+        <img src="homesecurity.png" alt="Descriptive Text for the Image">
+        <h2>What I Learned</h2>
+        <ul>
+            <li>The Use of Python in real world Applications</li>
+            <li>Designing a Cohesive System that Creates Interaction between Software and Hardware components</li>
+            <li>Better Understanding of creating user-friendly and practical solutions in technology</li>
+            <li>Learned to be innovative in overcoming real-world technical challenges</li>
+            <li>Knowledge in managing and responding to real-time data inputs from sensors</li>
+            <!-- more list items -->
+        
+        
+        </ul>
+    </div>
+   <div class="free">
+   <h2>Materials</h2>
+<p>Rasberry pi 4, Pressure Mat Sensor, Thonny Python IDE, Python Code, Jumper Wires</p>
+</div>
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="ras2.png" alt="Image 1">
+        <img src="ras3.png" alt="Image 2">
+        <img src="ras4.png" alt="Image 3">
+        <img src="ras5.png" alt="Image 4">
+        <img src="ras6.png" alt="Image 5">
+        <!-- Add more images as needed -->
+    </div>
+    <button class="carousel-button prev-button" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-button next-button" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    
+    
+    let index = 0;
+
+    function moveSlide(step) {
+        const slides = document.querySelectorAll('.carousel-images img');
+        const totalSlides = slides.length;
+        index = (index + step + totalSlides) % totalSlides;
+        const offset = -index * 100;
+        document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+</script>
+<div class="footer">
+    © 2024 Keme Rex. All rights reserved.
+</div>
+
+</body>
+</html>
